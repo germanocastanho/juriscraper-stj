@@ -78,8 +78,6 @@ def extrair_julgados(driver):
 
 def salvar_julgados(julgados):
     print("Salvando julgados... 📥")
-    for legado in ARQUIVOS.glob("*"):
-        legado.unlink()
     arquivo = ARQUIVOS / f"{uuid.uuid4().hex}.md"
     with open(arquivo, "w", encoding="utf-8") as f:
         f.write(julgados)
