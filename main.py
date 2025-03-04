@@ -33,7 +33,7 @@ def iniciar_navegador():
     opcoes.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(options=opcoes)
-    driver.get("https://processo.stj.jus.br/SCON/")
+    driver.get("https://scon.stj.jus.br/SCON/")
     time.sleep(3)
     return driver
 
@@ -47,40 +47,29 @@ def visitar_pagina(driver, keywords):
     return None
 
 
-def configurar_pagina(driver):
-    print("Configurando página... 🔧")
-    select_box = driver.find_element(By.ID, "qtdDocsPagina")
-    ActionChains(driver).click(select_box).perform()
-    select_box.send_keys(Keys.DOWN)
-    select_box.send_keys(Keys.DOWN)
-    select_box.send_keys(Keys.RETURN)
-    time.sleep(3)
-    return None
-
-
-def extrair_julgados(driver):
-    print("Extraindo julgados... 📜")
+def extrair_ementas(driver):
+    print("Extraindo ementas... 📜")
     page_fonte = driver.page_source
     soup = BeautifulSoup(page_fonte, "html.parser")
     titulos = soup.find_all("div", class_="docTitulo")
     textos = soup.find_all("div", class_="docTexto")
 
-    list_julgados = []
+    list_ementas = []
     for titulo, texto in zip(titulos, textos):
         chave, valor = titulo.text, texto.text
-        dict_julgados = {chave: valor}
-        if "Ementa" in dict_julgados:
-            list_julgados.append(dict_julgados["Ementa"])
-    julgados = "".join(list_julgados)
+        dict_ementas = {chave: valor}
+        if "Ementa" in dict_ementas:
+            list_ementas.append(dict_ementas["Ementa"])
+    ementas = "".join(list_ementas)
     time.sleep(3)
-    return julgados
+    return ementas
 
 
-def salvar_julgados(julgados):
-    print("Salvando julgados... 📥")
+def salvar_ementas(ementas):
+    print("Salvando ementas... 📥")
     arquivo = ARQUIVOS / f"{uuid.uuid4().hex}.md"
     with open(arquivo, "w", encoding="utf-8") as f:
-        f.write(julgados)
+        f.write(ementas)
     time.sleep(3)
     return None
 
@@ -96,9 +85,8 @@ def main():
     keywords = interagir_usuario()
     driver = iniciar_navegador()
     visitar_pagina(driver, keywords)
-    configurar_pagina(driver)
-    julgados = extrair_julgados(driver)
-    arquivo = salvar_julgados(julgados)
+    ementas = extrair_ementas(driver)
+    arquivo = salvar_ementas(ementas)
     finalizar_programa(driver)
     return None
 

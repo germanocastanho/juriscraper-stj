@@ -1,6 +1,6 @@
 # 🎯 JuriScraper STJ
 
-**Web scraper** desenvolvido em Python 🐍 especializado na extração de ementas do **Superior Tribunal de Justiça (STJ)** 🏛️. Um script simples, mas podedoso, que auxilia juristas com a automação 🦾 da coleta de precedetes recentes da Corte Superior. Através dele, são coletadas as 50 últimas decisões do Tribunal ⚖️ acerca do tema pesquisado; em seguida, as decisões são salvas em um arquivo Markdown 📜, perfeito para a alimentação de Large Language Models (LLMs)! 🤖
+**Web Scraper** desenvolvido em Python 🐍 especializado na extração de ementas do **Superior Tribunal de Justiça (STJ)** 🏛️. Um script simples, mas podedoso, que auxilia juristas com a automação 🦾 da coleta de precedetes recentes da Corte Superior. Através dele, são coletadas as 10 últimas decisões do Tribunal ⚖️ acerca do tema pesquisado; em seguida, as decisões são salvas em um arquivo Markdown 📜, perfeito para a alimentação de Large Language Models (LLMs)! 🤖
 
 <br />
 
@@ -31,9 +31,9 @@
 
 <br />
 
-> _**⚠️ OBS**.: o projeto utiliza o **WebDriver do Chrome** para automação da navegação web. Em versões mais recentes do Chrome, junto deste, aquele vem instalado por padrão. De todo modo, certifique-se de que o WebDriver está instalado e configurado corretamente no seu sistema. Para mais informações, acesse a [documentação oficial](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)._
+> _O projeto utiliza o **WebDriver do Chrome** para automação da navegação web. Em versões mais recentes do Chrome, junto deste, aquele vem instalado por padrão. De todo modo, certifique-se de que o WebDriver está instalado e configurado corretamente no seu sistema. Para mais informações, acesse a [documentação oficial](https://www.selenium.dev/documentation/en/webdriver/driver_requirements/)._
 
-> _**💡 DICA**: visando uma melhor formatação do documento, que por padrão é criado **sem quebras de linha**, recomenda-se a utilização do editor de texto [VS Code](https://code.visualstudio.com/), configurado da seguinte forma - para as configurações do Markdown, acrescente os pares nome/valor: `"editor.wordWrap": "wordWrapColumn"`, `"editor.wordWrapColumn": 80`, e `"editor.rulers": [80]`._
+> _Visando uma melhor formatação do documento, que por padrão é criado **sem quebras de linha**, recomenda-se a utilização do editor de texto [VS Code](https://code.visualstudio.com/), configurado da seguinte forma - para as configurações do Markdown, acrescente os pares nome/valor: `"editor.wordWrap": "wordWrapColumn"`, `"editor.wordWrapColumn": 80`, e `"editor.rulers": [80]`._
 
 <br clear="both">
 
