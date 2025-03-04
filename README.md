@@ -75,7 +75,7 @@ Contribuições são sempre bem-vindas! Se deseja colaborar, siga [boas prática
 
 <br />
 
-> _**⚠️ OBS**: o projeto baseia-se na **estrutura HTML** do site do STJ em 2025. Em havendo alterações significativas nesta estrutura, o script provavelmente não funcionará de maneira adequada, devendo ser adaptado, o que torna as contribuições ainda mais importantes! Caso isso ocorra, abra uma [issue](https://github.com/germanocastanho/juriscraper-stj/issues) para que possamos corrigir o problema._
+> _O projeto baseia-se na **estrutura HTML** do site do STJ em 2025. Em havendo alterações significativas nesta estrutura, o script provavelmente não funcionará de maneira adequada, devendo ser adaptado, o que torna as contribuições ainda mais importantes! Caso isso ocorra, abra uma [issue](https://github.com/germanocastanho/juriscraper-stj/issues) para que possamos corrigir o problema._
 
 <br clear="both">
 
