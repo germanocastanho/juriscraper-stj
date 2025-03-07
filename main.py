@@ -28,9 +28,6 @@ def iniciar_navegador():
     opcoes = Options()
     opcoes.add_argument("--headless")
     opcoes.add_argument("--disable-gpu")
-    opcoes.add_argument("--window-size=1920x1080")
-    opcoes.add_argument("--no-sandbox")
-    opcoes.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(options=opcoes)
     driver.get("https://scon.stj.jus.br/SCON/")
