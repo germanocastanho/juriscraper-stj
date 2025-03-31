@@ -1,6 +1,6 @@
 # 🎯 JuriScraper STJ
 
-**Web Scraper** voltado à extração de ementas do **Superior Tribunal de Justiça (STJ)**. Um script simples, porém poderoso, que visa auxiliar juristas, coletando as últimas decisões da Corte acerca do tema pesquisado; em seguida, salvando-as em Markdown, para facilitar eventual integração com modelos de Inteligência Artificial (IA). 🤖
+**Scraper** voltado à extração de ementas do **Superior Tribunal de Justiça (STJ)**. Um script simples, porém poderoso, que visa auxiliar juristas na pesquisa jurisprudencial, salvando as ementas em Markdown, para facilitar eventual integração com modelos de Inteligência Artificial (IA). 🤖
 
 <div align="center">
   <img style="max-width: 100%; height: auto;" src="assets/tribunal.jpg" alt="Brasília/DF, 11/09/2024 - Sessão do Pleno, de Emerson Leal" />
@@ -9,7 +9,7 @@
 
 # 🚀 Funcionalidades
 
-- **Extração de Ementas:** 📜 Coleta automatizada de ementas do STJ, facilitando a análise de jurisprudência.
+- **Extração de Ementas:** 🕸️ Coleta automatizada de ementas do STJ, facilitando a análise de jurisprudência.
 - **Formato Markdown:** 📄 Geração de arquivos Markdown, facilitando a integração com modelos de IA.
 - **Interface Minimalista:** 🎨 Interação através de linha de comando, proporcionando praticidade às buscas.
 
