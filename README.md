@@ -13,6 +13,10 @@
 - **Formato Markdown:** 📄 Geração de arquivos Markdown, facilitando a integração com modelos de IA.
 - **Interface Minimalista:** 🎨 Interação através de linha de comando, proporcionando praticidade às buscas.
 
+# ✅ Pré-requisitos
+
+- Python 3.12 ou superior, disponível através do [**site oficial**](https://www.python.org/downloads/).
+
 # 🛠️ Instalação Local
 
 ```bash
