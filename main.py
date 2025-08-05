@@ -63,22 +63,22 @@ def get_max_headnotes_per_page(driver):
     return None
 
 
+# TODO: Format the headnotes properly
 def extract_stj_headnotes(driver):
     print("Extracting Court headnotes... 📜")
-    page_source = driver.page_source
-    soup = BeautifulSoup(page_source, "html.parser")
-    titles = soup.find_all("div", class_="docTitulo")
-    texts = soup.find_all("div", class_="docTexto")
+    soup = BeautifulSoup(driver.page_source, "html.parser")
 
-    notes_list = []
-    for title, text in zip(titles, texts):
-        key, value = title.text, text.text
-        notes_dict = {key: value}
-        if "Ementa" in notes_dict:
-            notes_list.append(notes_dict["Ementa"])
+    sources = []
+    index = 1
 
-    headnotes = "".join(notes_list)
-    time.sleep(3)
+    while True:
+        textarea = soup.find("textarea", {"id": f"textSemformatacao{index}"})
+        if not textarea:
+            break
+        sources.append(textarea.text.strip())
+        index += 1
+
+    headnotes = "\n\n".join(sources)
     return headnotes
 
 
